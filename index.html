@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Feliz Aniversario!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-image: url('https://www.transparenttextures.com/patterns/leather.png');
+      background-color: #5b3922;
+      background-size: auto;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .tarjeta {
+      background: rgba(0, 0, 0, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px 20px;
+      max-width: 500px;
+      width: 100%;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      color: #ffd9b3;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #ffe6cc;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #fff4e6;
+    }
+
+    .heart {
+      color: #ffcccc;
+      font-size: 2em;
+      animation: beat 1.2s infinite;
+    }
+
+    audio {
+      margin-top: 25px;
+      width: 100%;
+    }
+
+    @keyframes beat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="tarjeta">
+    <img src="resources/WhatsApp Image 2025-07-13 at 8.28.46 PM.jpeg" alt="">
+    <h1>¡Feliz Aniversario!</h1>
+    <h2>DENNYS & LESLEY</h2>
+    <p>Una unión que nació del inmenso amor que se tienen, y que con el tiempo ha dado fruto a un hogar lleno de ternura
+      y cariño para su hijita.
+
+      <br><br>
+
+      Cada año que pasa es una página más en esta hermosa historia que están escribiendo con entrega y amor. Este tercer
+      aniversario es un reflejo de cómo el verdadero amor no solo perdura, sino que se fortalece cuando se cultiva con
+      respeto, comprensión y alegría. Sigan mostrándose las cualidades que menciona Efesios 4:32.
+
+      <br><br>
+
+      ¡Felicitaciones una vez más! Que nunca dejen de hacer de Jehová su triple cuerda... y que Él siga bendiciendo con
+      amor, paz y unidad su bella familia.
+    </p>
+    <p>Que esta historia continúe llena de alegría, respeto y amor eterno.</p>
+    <p><span class="heart">❤</span></p>
+    <audio audio id="miAudio" autoplay loop>
+      <source src="resources/Camila Cabello Nicholas Galitzine - Perfect [video + letra en español ] Cinderella - Bozhanick.mp3"
+        type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    const audio = document.getElementById("miAudio");
+
+    // Esperar a que se cargue el audio antes de establecer el tiempo
+    audio.addEventListener("loadedmetadata", () => {
+      audio.currentTime = 15; // empieza desde el segundo 30
+    });
+
+    // Opcional: comenzar automáticamente después de establecer el tiempo
+    audio.addEventListener("canplay", () => {
+      audio.play();
+    });
+  </script>
+</body>
+
+</html>
