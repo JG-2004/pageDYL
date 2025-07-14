@@ -120,25 +120,22 @@
     </p>
     <p>Que esta historia continúe llena de alegría, respeto y amor eterno.</p>
     <p><span class="heart">❤</span></p>
-    <audio audio id="miAudio" hidden autoplay loop>
-      <source src="resources/Camila Cabello Nicholas Galitzine - Perfect [video + letra en español ] Cinderella - Bozhanick.mp3"
-        type="audio/mpeg">
+    <audio id="miAudio" hidden autoplay loop>
+      <source src="resources/Camila Cabello Nicholas Galitzine - Perfect [video + letra en español ] Cinderella - Bozhanick.mp3" type="audio/mpeg">
     </audio>
-  </div>
-
+  </div>  
   <script>
     const audio = document.getElementById("miAudio");
-
-    // Esperar a que se cargue el audio antes de establecer el tiempo
+  
     audio.addEventListener("loadedmetadata", () => {
-      audio.currentTime = 15; // empieza desde el segundo 30
+      audio.currentTime = 15; // empieza desde el segundo 15
     });
-
-    // Opcional: comenzar automáticamente después de establecer el tiempo
+  
     audio.addEventListener("canplay", () => {
-      audio.play();
+      audio.play(); // asegurarse de que se reproduzca después de establecer el tiempo
     });
   </script>
+
 </body>
 
 </html>
